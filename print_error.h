@@ -2,9 +2,8 @@
 #define PRINT_ERROR_H
 
 #include <errno.h>
+#include <string.h>
 #include <stdio.h>
-#include <sys/types.h>
-#include <sys/socket.h>
 
 void print_error();
 
