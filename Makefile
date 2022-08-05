@@ -13,3 +13,4 @@ launch_%: %.o
 clean:
 	@echo "Cleaning up..."
 	rm -rvf *.o
+
