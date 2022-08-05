@@ -14,6 +14,8 @@
 #define TYPE SOCK_STREAM
 #define PROTOCOL (0)
 #define SHUTDOWN_HOW SHUT_RDWR
+#define FAMILY AF_INET
+#define IP_ADDRESS "127.0.0.1"
 
 
 #define PORT (8080)
