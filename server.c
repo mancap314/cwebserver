@@ -54,6 +54,9 @@ int main(int argc, char const* argv[])
         valread = read(new_client_socket_fd, buffer, BUFFERLEN);
         printf("buffer: %s\n", buffer);
 
+        /* here you could put some logic to process `valread` and return the
+         * result instead of `hello` */
+
         // 7. Send response
         send(new_client_socket_fd, hello, strlen(hello), 0);
 
