@@ -18,12 +18,14 @@ int main(int argc, char const* argv[])
         exit(EXIT_FAILURE);
     }
 
-    // 2. Attach forcefully socket to port PORT 
+    // 1.1. (optional) Attach forcefully socket to port PORT 
     if(setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt))) {
         perror("Error with setsockopt()\n");
         print_error();
         exit(EXIT_FAILURE);
     }
+
+    // 2. Create address
     address.sin_family = DOMAIN;
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(PORT);
